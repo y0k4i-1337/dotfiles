@@ -1,0 +1,8 @@
+vim/.vim/tmp
+# .local files are 'secret' or custom user files
+*.local
+# machine/user specific zsh files
+.zlogin
+.zlogout
+.zprofile
+.zshenv
