@@ -46,6 +46,12 @@ LINK: .vimrc => .dotfiles/vim/.vimrc
 WARNING: in simulation mode so not modifying filesystem.
 ```
 
+## Preview
+Here are some screenshots taken from current programs setup.
+
+### vim
+![vim](https://raw.githubusercontent.com/mchoji/dotfiles/a972b2c5c1131fd9e0eb4fa88b7945a0394273bb/vim.png)
+
 ## License
 This is free and unencumbered software released into the public domain.
 See the [LICENSE](LICENSE) file for details.
