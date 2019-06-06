@@ -19,14 +19,13 @@ export TERM="xterm-256color"
 #ZSH_THEME="agnoster"
 if [[ ${XDG_SESSION_TYPE} = 'tty' ]]; then
     ZSH_THEME="powerlevel9k/powerlevel9k"
-    [ -r ${HOME}/.powerlinerc.local ] && . ${HOME}/.powerlinerc.local
-     ${HOME}/.powerlinerc_console
+    source ${HOME}/.powerlinerc_console
     source ${HOME}/.powerlinerc_noicon
+    [ -r ${HOME}/.powerlinerc.local ] && . ${HOME}/.powerlinerc.local
 else
     ZSH_THEME="powerlevel9k/powerlevel9k"
-    [ -r ${HOME}/.powerlinerc.local ] && . ${HOME}/.powerlinerc.local
-    source ${HOME}/.powerlinerc.local
     source ${HOME}/.powerlinerc
+    [ -r ${HOME}/.powerlinerc.local ] && . ${HOME}/.powerlinerc.local
 fi
 
 # Set list of themes to pick from when loading at random

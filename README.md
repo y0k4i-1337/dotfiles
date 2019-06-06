@@ -2,6 +2,7 @@
 Here is a list of my configuration files.
 ```
 vim         > text editor config
+zsh         > zsh with Oh My Zsh framework
 ```
 
 ## Prerequisites
@@ -17,6 +18,16 @@ For instance, in **Arch** you could install it with `pacman`:
 sudo pacman -S stow
 ```
 **Note:** This is not necessarily a prerequisite but it makes life easier.
+
+### zsh
+This `zsh` config relies on [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
+framework with the following custom theme and plugins:
+#### Oh My Zsh custom theme
+* [Powerlevel9k](https://github.com/bhilburn/powerlevel9k)
+
+#### Oh My Zsh custom plugins
+* [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ## Manual Installation
 Once `stow` is installed, clone this repository into `$HOME`,
@@ -45,6 +56,16 @@ LINK: .vim => .dotfiles/vim/.vim
 LINK: .vimrc => .dotfiles/vim/.vimrc
 WARNING: in simulation mode so not modifying filesystem.
 ```
+
+## Customization
+Whenever possible, I try to keep things organized in such a way
+that one could easily add their own preferences on top of mine.
+
+### zsh
+For `zsh`, personal configuration can be placed in files like
+`.zprofile`, `.functions.local` and `.alias.local`.
+See [.gitignore](.gitignore) and [.zshrc](zsh/.zshrc) to check which
+files are not included in this repository.
 
 ## Preview
 Here are some screenshots taken from current programs setup.
