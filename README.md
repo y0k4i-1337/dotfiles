@@ -50,7 +50,10 @@ WARNING: in simulation mode so not modifying filesystem.
 Here are some screenshots taken from current programs setup.
 
 ### vim
-![vim](../a972b2c5c1131fd9e0eb4fa88b7945a0394273bb/vim.png?raw=true)
+![vim](https://raw.githubusercontent.com/mchoji/dotfiles/a972b2c5c1131fd9e0eb4fa88b7945a0394273bb/vim.png)
+
+### zsh
+![zsh](https://raw.githubusercontent.com/mchoji/dotfiles/6194ce0af609e0ef77c6ecc6c692205d1f67f8d8/zsh.png)
 
 ## License
 This is free and unencumbered software released into the public domain.
