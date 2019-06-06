@@ -50,7 +50,7 @@ WARNING: in simulation mode so not modifying filesystem.
 Here are some screenshots taken from current programs setup.
 
 ### vim
-![vim](https://raw.githubusercontent.com/mchoji/dotfiles/a972b2c5c1131fd9e0eb4fa88b7945a0394273bb/vim.png)
+![vim](../a972b2c5c1131fd9e0eb4fa88b7945a0394273bb/vim.png?raw=true)
 
 ## License
 This is free and unencumbered software released into the public domain.
