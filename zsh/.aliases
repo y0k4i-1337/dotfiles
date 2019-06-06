@@ -1,0 +1,53 @@
+# This file should be sourced by files like .zshrc and .bashrc
+
+## get top 10 shell commands:
+#alias top10='print -l ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
+
+## Execute \kbd{./configure}
+#alias CO="./configure"
+
+## Execute \kbd{./configure --help}
+#alias CH="./configure --help"
+
+## Go to uplevel 
+alias ....='cd ../../..'
+alias .3='cd ../../../'                     # Go back 3 directory levels
+alias .4='cd ../../../../'                  # Go back 4 directory levels
+alias .5='cd ../../../../../'               # Go back 5 directory levels
+alias .6='cd ../../../../../../'            # Go back 6 directory levels
+
+## Preferred switches for usual commands
+alias less='less -FSRXc'                    # Preferred 'less' implementation
+alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias mv='mv -iv'                           # Preferred 'mv' implementation
+alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
+alias ip='ip -c'                            # Preferred 'ip' implementation
+alias clamdscan='clamdscan --multiscan --fdpass'
+alias opera='opera --password-store=basic'
+
+# f: Open current directory in preferred File Manager
+alias f='exo-open --launch FileManager ./'
+
+# fix_stty: Restore terminal settings when screwed up
+alias fix_stty='stty sane'
+
+# path: Echo all executable Paths
+alias path='echo -e ${PATH//:/\\n}'
+
+# c: Clear terminal display
+alias c='clear' 
+
+#lr: Full Recursive Directory Listing
+#   ------------------------------------------
+alias lR='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
+# ll: List in reversed time order
+alias ll='ls -lrthF'
+# lsd: List directories
+alias lsd='ls -d */'
+
+# Other aliases
+alias netCons='lsof -i'                     # netCons:      Show all open TCP/IP sockets
+alias lsock='lsof -i -P'                    # lsock:        Display open sockets
+alias ludp='ss -anpu'                       # ludp:         Display only open UDP sockets
+alias ltcp='ss -anpt'                       # ltcp:         Display only open TCP sockets
+alias openPorts='ss -anlut'                 # openPorts:    All listening connections
