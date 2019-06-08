@@ -1,13 +1,16 @@
 # dotfiles
 Here is a list of my configuration files.
 ```
+awesome     > a dynamic window manager
 vim         > text editor config
 zsh         > zsh with Oh My Zsh framework
 ```
 
-## Prerequisites
-Obviously, you should install the correspondent software before
-using any of the configuration files described in [this list](#dotfiles).
+## Getting Started
+If you want to clone this repository and automatically clone all its
+included submodules, you should execute
+
+`git clone --recurse-submodules https://github.com/mchoji/dotfiles`
 
 ### GNU Stow
 I manage my dotfiles with [GNU Stow](https://www.gnu.org/software/stow/),
@@ -18,6 +21,21 @@ For instance, in **Arch** you could install it with `pacman`:
 sudo pacman -S stow
 ```
 **Note:** This is not necessarily a prerequisite but it makes life easier.
+
+## Prerequisites
+Obviously, you should install the correspondent software before
+using any of the configuration files described in [this list](#dotfiles).
+
+Besides, here are specific dependencies and/or important notes about
+each program (when needed).
+
+### awesome
+This config is basically the same as the original 
+[worron's awesome-config](https://github.com/worron/awesome-config)
+with some personal customization. In order to easily track the updates
+from the original repo, I commit my changes in a specific branch. 
+For more information, please have a look at 
+[my awesome-config](https://github.com/mchoji/awesome-config).
 
 ### zsh
 This `zsh` config relies on [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
@@ -69,6 +87,9 @@ files are not included in this repository.
 
 ## Preview
 Here are some screenshots taken from current programs setup.
+
+### awesome
+![awesome](https://raw.githubusercontent.com/mchoji/dotfiles/b63a01c3782ae14588cf0fc7c4ba5c17a3f3a1f7/awesome.png)
 
 ### vim
 ![vim](https://raw.githubusercontent.com/mchoji/dotfiles/a972b2c5c1131fd9e0eb4fa88b7945a0394273bb/vim.png)
