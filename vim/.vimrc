@@ -123,6 +123,9 @@ endif
 " Color scheme {{{
 set background=dark
 colorscheme blackarch
+if &diff
+    colorscheme apprentice
+endif
 " }}}
 " Statusline {{{
 set statusline=
