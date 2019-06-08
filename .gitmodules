@@ -1,3 +1,5 @@
 [submodule "awesome/.config/awesome"]
 	path = awesome/.config/awesome
 	url = https://github.com/mchoji/awesome-config.git
+[submodule "awesome"]
+	branch = myruby
