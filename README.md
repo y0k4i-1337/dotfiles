@@ -7,10 +7,11 @@ zsh         > zsh with Oh My Zsh framework
 ```
 
 ## Getting Started
-If you want to clone this repository and automatically clone all its
-included submodules, you should execute
+To clone this repository in your home dir and automatically clone all its
+included submodules, you could do
 
-`git clone --recurse-submodules https://github.com/mchoji/dotfiles`
+1. `cd ~`
+2. `git clone --recurse-submodules https://github.com/mchoji/dotfiles`
 
 ### GNU Stow
 I manage my dotfiles with [GNU Stow](https://www.gnu.org/software/stow/),
@@ -70,8 +71,8 @@ stow -nv vim
 ```
 shows the following in standard output:
 ```
-LINK: .vim => .dotfiles/vim/.vim
-LINK: .vimrc => .dotfiles/vim/.vimrc
+LINK: .vim => dotfiles/vim/.vim
+LINK: .vimrc => dotfiles/vim/.vimrc
 WARNING: in simulation mode so not modifying filesystem.
 ```
 
