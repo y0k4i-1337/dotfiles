@@ -221,3 +221,8 @@ if &diff
     highlight! link DiffText MatchParen
 endif
 
+" Useful keymaps {{{
+noremap <F7> :w !xclip<CR><CR>
+noremap <S-F7> :r !xclip -o<CR>
+
+" }}}
