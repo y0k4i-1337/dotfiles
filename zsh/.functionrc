@@ -30,6 +30,17 @@ plap() {
     fi
 }
 
+
+## Copies the pathname of the current directory to the system or X Windows clipboard
+copydir() {
+    print -n $PWD | xclip
+}
+
+## Copies the contents of a given file to the system or X Windows clipboard
+copyfile() {
+    xclip $1
+}
+
 ## Find out which libs define a symbol
 #lcheck() {
 #    if [[ -n "$1" ]] ; then

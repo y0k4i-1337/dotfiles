@@ -1,15 +1,17 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Load profiles
-[ -r /etc/zsh/zprofile ] && . /etc/zsh/zprofile
-[ -r ${HOME}/.zprofile ] && . ${HOME}/.zprofile
+if [[ ! -o login ]]; then
+    # Load profiles
+    [[ -r /etc/zsh/zprofile ]] && . /etc/zsh/zprofile
+    [[ -r ${HOME}/.zprofile ]] && . ${HOME}/.zprofile
+fi
 
 # Use a 256-color terminal
 export TERM="xterm-256color"
 
 # Path to your oh-my-zsh installation.
-  export ZSH="${HOME}/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -19,13 +21,13 @@ export TERM="xterm-256color"
 #ZSH_THEME="agnoster"
 if [[ ${XDG_SESSION_TYPE} = 'tty' ]]; then
     ZSH_THEME="powerlevel9k/powerlevel9k"
-    source ${HOME}/.powerlinerc_console
-    source ${HOME}/.powerlinerc_noicon
-    [ -r ${HOME}/.powerlinerc.local ] && . ${HOME}/.powerlinerc.local
+    . ${HOME}/.powerlinerc_console
+    . ${HOME}/.powerlinerc_noicon
+    [[ -r ${HOME}/.powerlinerc.local ]] && . ${HOME}/.powerlinerc.local
 else
     ZSH_THEME="powerlevel9k/powerlevel9k"
-    source ${HOME}/.powerlinerc
-    [ -r ${HOME}/.powerlinerc.local ] && . ${HOME}/.powerlinerc.local
+    . ${HOME}/.powerlinerc
+    [[ -r ${HOME}/.powerlinerc.local ]] && . ${HOME}/.powerlinerc.local
 fi
 
 # Set list of themes to pick from when loading at random
@@ -70,7 +72,7 @@ fi
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -85,8 +87,6 @@ plugins=(
     archlinux
     bundler
     common-aliases
-    copyfile
-    copydir
     cp
     cpanm
     docker
@@ -96,6 +96,8 @@ plugins=(
     git-extras
     history
     python
+    ruby
+    rvm
     sublime
     sudo
     systemd
@@ -105,7 +107,7 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
+. $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -141,6 +143,12 @@ export ARCHFLAGS="-arch x86_64"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# Enable keychain
+eval $(keychain --eval --quiet --confhost --noask --nogui)
+
+# Enable local luarocks
+eval $(luarocks path --bin)
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -151,11 +159,16 @@ export ARCHFLAGS="-arch x86_64"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Load aliases
-[ -r ${HOME}/.aliases ] && . ${HOME}/.aliases
-[ -r ${HOME}/.aliases.local ] && . ${HOME}/.aliases.local
+[[ -r ${HOME}/.aliasrc ]] && . ${HOME}/.aliasrc
+[[ -r ${HOME}/.aliasrc.local ]] && . ${HOME}/.aliasrc.local
 # Load functions
-[ -r ${HOME}/.functions ] && . ${HOME}/.functions
-[ -r ${HOME}/.functions.local ] && . ${HOME}/.functions.local
+[[ -r ${HOME}/.functionrc ]] && . ${HOME}/.functionrc
+[[ -r ${HOME}/.functionrc.local ]] && . ${HOME}/.functionrc.local
 # Load hashes
-[ -r ${HOME}/.hashes ] && . ${HOME}/.hashes
-[ -r ${HOME}/.hashes.local ] && . ${HOME}/.hashes.local
+[[ -r ${HOME}/.hashrc ]] && . ${HOME}/.hashrc
+[[ -r ${HOME}/.hashrc.local ]] && . ${HOME}/.hashrc.local
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+path=($path ${HOME}/.rvm/bin)
+# Load RVM into a shell session *as a function*
+[[ -s "${HOME}/.rvm/scripts/rvm" ]] && . "${HOME}/.rvm/scripts/rvm"
