@@ -84,7 +84,6 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    archlinux
     bundler
     common-aliases
     cp
@@ -146,8 +145,9 @@ export ARCHFLAGS="-arch x86_64"
 # Enable keychain
 eval $(keychain --eval --quiet --confhost --noask --nogui)
 
-# Enable local luarocks
-eval $(luarocks path --bin)
+# Enable luarocks
+eval $(luarocks path --no-bin)
+path=(${HOME}/.luarocks/bin $path)
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh

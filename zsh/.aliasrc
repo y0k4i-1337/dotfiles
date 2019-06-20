@@ -26,7 +26,7 @@ alias clamdscan='clamdscan --multiscan --fdpass'
 alias opera='opera --password-store=basic'
 
 # f: Open current directory in preferred File Manager
-alias f='exo-open --launch FileManager ./'
+alias f='xdg-open ./'
 
 # fix_stty: Restore terminal settings when screwed up
 alias fix_stty='stty sane'
@@ -51,3 +51,27 @@ alias lsock='lsof -i -P'                    # lsock:        Display open sockets
 alias ludp='ss -anpu'                       # ludp:         Display only open UDP sockets
 alias ltcp='ss -anpt'                       # ltcp:         Display only open TCP sockets
 alias openPorts='ss -anlut'                 # openPorts:    All listening connections
+
+#--------------------------------------------
+# Useful aliases based on Oh My Zsh plugins #
+#--------------------------------------------
+#
+#--------------------------------------------
+#            Package managers               #
+#--------------------------------------------
+alias yaconf='yay -Pg'                      # Print current config
+alias yain='yay -S'                         # Install packages from repos
+alias yainsd='yay -S --asdeps'              # Install a package as dependency
+alias yaloc='yay -Qi'                       # Display info about a package in the local database
+alias yalocs='yay -Qs'                      # Search for packages in the local database
+alias yalst='yay -Qe'                       # List installed packages including from AUR
+alias yaorph='yay -Qtd'                     # List orphans
+alias yare='yay -R'                         # Remove packages, keeping its settings and dependencies
+alias yarem='yay -Rns'                      # Remove packages, including its settings and unneeded dependencies
+alias yarep='yay -Si'                       # Display info about a package in the repos
+alias yareps='yay -Ss'                      # Search for packages in the repositories
+alias yaupg='yay -Syu'                      # Sync with repositories before upgrading packages
+alias yarmorph='yay -Rns $(yay -Qtdq)'      # Remove all orphaned packages, including its settings and unneeded dependencies
+alias yafiles='yay -Fs'                     # Search package file names for matching strings
+alias yals='yay -Ql'                        # List files in package
+alias yaown='yay -Qo'                       # Show which package own a file
