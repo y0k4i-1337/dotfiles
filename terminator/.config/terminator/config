@@ -1,0 +1,476 @@
+[global_config]
+  enabled_plugins = TerminatorThemes, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  geometry_hinting = True
+  inactive_color_offset = 0.451127819549
+  title_font = Hack Nerd Font Mono 12
+  title_hide_sizetext = True
+[keybindings]
+  next_profile = <Alt>p
+  previous_profile = <Shift><Alt>p
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    allow_bold = False
+    cursor_color = "#aaaaaa"
+    font = Hack Nerd Font Mono 12
+    icon_bell = False
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[AlienBlood]]
+    allow_bold = False
+    background_color = "#0f1610"
+    cursor_color = "#73fa91"
+    foreground_color = "#637d75"
+    icon_bell = False
+    palette = "#112616:#7f2b27:#2f7e25:#717f24:#2f6a7f:#47587f:#327f77:#647d75:#3c4812:#e08009:#18e000:#bde000:#00aae0:#0058e0:#00e0c4:#73fa91"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Atom]]
+    allow_bold = False
+    background_color = "#161719"
+    cursor_color = "#d0d0d0"
+    foreground_color = "#c5c8c6"
+    icon_bell = False
+    palette = "#000000:#fd5ff1:#87c38a:#ffd7b1:#85befd:#b9b6fc:#85befd:#e0e0e0:#000000:#fd5ff1:#94fa36:#f5ffa8:#96cbfe:#b9b6fc:#85befd:#e0e0e0"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[AtomOneLight]]
+    allow_bold = False
+    background_color = "#f9f9f9"
+    cursor_color = "#bbbbbb"
+    foreground_color = "#2a2c33"
+    icon_bell = False
+    palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Batman]]
+    allow_bold = False
+    background_color = "#1b1d1e"
+    cursor_color = "#fcef0c"
+    foreground_color = "#6f6f6f"
+    icon_bell = False
+    palette = "#1b1d1e:#e6dc44:#c8be46:#f4fd22:#737174:#747271:#62605f:#c6c5bf:#505354:#fff78e:#fff27d:#feed6c:#919495:#9a9a9d:#a3a3a6:#dadbd6"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Belafonte Night]]
+    allow_bold = False
+    background_color = "#20111b"
+    cursor_color = "#968c83"
+    foreground_color = "#968c83"
+    icon_bell = False
+    palette = "#20111b:#be100e:#858162:#eaa549:#426a79:#97522c:#989a9c:#968c83:#5e5252:#be100e:#858162:#eaa549:#426a79:#97522c:#989a9c:#d5ccba"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Blitz]]
+    allow_bold = False
+    background_color = "#16141e"
+    cursor_color = "#00ecc8"
+    foreground_color = "#00ecc8"
+    icon_bell = False
+    palette = "#2e3436:#f70047:#00ff7d:#fcdd42:#26b3d2:#b055f4:#ff8db4:#d3d7cf:#555753:#ff5555:#55ff55:#ffff55:#729fcf:#ff55ff:#34e2e2:#eeeeec"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Brogrammer]]
+    allow_bold = False
+    background_color = "#131313"
+    cursor_color = "#b9b9b9"
+    foreground_color = "#d6dbe5"
+    icon_bell = False
+    palette = "#1f1f1f:#f81118:#2dc55e:#ecba0f:#2a84d2:#4e5ab7:#1081d6:#d6dbe5:#d6dbe5:#de352e:#1dd361:#f3bd09:#1081d6:#5350b9:#0f7ddb:#ffffff"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[CLRS]]
+    allow_bold = False
+    background_color = "#ffffff"
+    cursor_color = "#6fd3fc"
+    font = Hack Nerd Font Mono 12
+    foreground_color = "#262626"
+    icon_bell = False
+    palette = "#000000:#f8282a:#328a5d:#fa701d:#135cd0:#9f00bd:#33c3c1:#b3b3b3:#555753:#fb0416:#2cc631:#fdd727:#1670ff:#e900b0:#3ad5ce:#eeeeec"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Candy]]
+    allow_bold = False
+    cursor_color = "#aaaaaa"
+    icon_bell = False
+    palette = "#2e3436:#fa2573:#a6e32d:#fc951e:#c48dff:#fa2573:#67d9f0:#f2f2f2:#555753:#fa2573:#8ae234:#fce94f:#729fcf:#fa2573:#34e2e2:#eeeeec"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[CrayonPonyFish]]
+    allow_bold = False
+    background_color = "#150707"
+    cursor_color = "#68525a"
+    foreground_color = "#68525a"
+    icon_bell = False
+    palette = "#2b1b1d:#91002b:#579524:#ab311b:#8c87b0:#692f50:#e8a866:#68525a:#3d2b2e:#c5255d:#8dff57:#c8381d:#cfc9ff:#fc6cba:#ffceaf:#b0949d"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Darksoul]]
+    allow_bold = False
+    cursor_color = "#ffffff"
+    foreground_color = "#afc2c2"
+    icon_bell = False
+    palette = "#101010:#ff3030:#559a70:#ccac00:#0099cc:#cc69c8:#7ac4cc:#bccccc:#101010:#ff3030:#559a70:#ccac00:#0099cc:#cc69c8:#7ac4cc:#bccccc"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[FirefoxDev]]
+    allow_bold = False
+    background_color = "#0e1011"
+    cursor_color = "#708284"
+    foreground_color = "#7c8fa4"
+    icon_bell = False
+    palette = "#002831:#e63853:#5eb83c:#a57706:#359ddf:#d75cff:#4b73a2:#dcdcdc:#001e27:#e1003f:#1d9000:#cd9409:#006fc0:#a200da:#005794:#e2e2e2"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Glacier]]
+    allow_bold = False
+    background_color = "#0c1115"
+    cursor_color = "#6c6c6c"
+    foreground_color = "#ffffff"
+    icon_bell = False
+    palette = "#2e343c:#bd0f2f:#35a770:#fb9435:#1f5872:#bd2523:#778397:#ffffff:#404a55:#bd0f2f:#49e998:#fddf6e:#2a8bc1:#ea4727:#a0b6d3:#ffffff"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Grape]]
+    allow_bold = False
+    background_color = "#171423"
+    cursor_color = "#a288f7"
+    foreground_color = "#9f9fa1"
+    icon_bell = False
+    palette = "#2d283f:#ed2261:#1fa91b:#8ddc20:#487df4:#8d35c9:#3bdeed:#9e9ea0:#59516a:#f0729a:#53aa5e:#b2dc87:#a9bcec:#ad81c2:#9de3eb:#a288f7"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Hardcore]]
+    allow_bold = False
+    background_color = "#121212"
+    cursor_color = "#bbbbbb"
+    foreground_color = "#a0a0a0"
+    icon_bell = False
+    palette = "#1b1d1e:#f92672:#a6e22e:#fd971f:#66d9ef:#9e6ffe:#5e7175:#ccccc6:#505354:#ff669d:#beed5f:#e6db74:#66d9ef:#9e6ffe:#a3babf:#f8f8f2"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Harper]]
+    allow_bold = False
+    background_color = "#010101"
+    cursor_color = "#a8a49d"
+    foreground_color = "#a8a49d"
+    icon_bell = False
+    palette = "#010101:#f8b63f:#7fb5e1:#d6da25:#489e48:#b296c6:#f5bfd7:#a8a49d:#726e6a:#f8b63f:#7fb5e1:#d6da25:#489e48:#b296c6:#f5bfd7:#fefbea"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Hurtado]]
+    allow_bold = False
+    cursor_color = "#bbbbbb"
+    foreground_color = "#dbdbdb"
+    icon_bell = False
+    palette = "#575757:#ff1b00:#a5e055:#fbe74a:#496487:#fd5ff1:#86e9fe:#cbcccb:#262626:#d51d00:#a5df55:#fbe84a:#89beff:#c001c1:#86eafe:#dbdbdb"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Hybrid]]
+    allow_bold = False
+    background_color = "#161719"
+    cursor_color = "#b7bcba"
+    foreground_color = "#b7bcba"
+    icon_bell = False
+    palette = "#2a2e33:#b84d51:#b3bf5a:#e4b55e:#6e90b0:#a17eac:#7fbfb4:#b5b9b6:#1d1f22:#8d2e32:#798431:#e58a50:#4b6b88:#6e5079:#4d7b74:#5a626a"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Jellybeans]]
+    allow_bold = False
+    background_color = "#121212"
+    cursor_color = "#ffa560"
+    foreground_color = "#dedede"
+    icon_bell = False
+    palette = "#929292:#e27373:#94b979:#ffba7b:#97bedc:#e1c0fa:#00988e:#dedede:#bdbdbd:#ffa1a1:#bddeab:#ffdca0:#b1d8f6:#fbdaff:#1ab2a8:#ffffff"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[JetBrains Darcula]]
+    allow_bold = False
+    background_color = "#202020"
+    cursor_color = "#ffffff"
+    foreground_color = "#adadad"
+    icon_bell = False
+    palette = "#000000:#fa5355:#126e00:#c2c300:#4581eb:#fa54ff:#33c2c1:#adadad:#555555:#fb7172:#67ff4f:#ffff00:#6d9df1:#fb82ff:#60d3d1:#eeeeee"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[LiquidCarbonTransparent]]
+    allow_bold = False
+    cursor_color = "#ffffff"
+    font = Hack Nerd Font Mono 12
+    foreground_color = "#afc2c2"
+    icon_bell = False
+    palette = "#000000:#ff3030:#559a70:#ccac00:#0099cc:#cc69c8:#7ac4cc:#bccccc:#000000:#ff3030:#559a70:#ccac00:#0099cc:#cc69c8:#7ac4cc:#bccccc"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[LiquidCarbonTransparentInverse]]
+    allow_bold = False
+    cursor_color = "#ffffff"
+    foreground_color = "#afc2c2"
+    icon_bell = False
+    palette = "#bccccd:#ff3030:#559a70:#ccac00:#0099cc:#cc69c8:#7ac4cc:#000000:#ffffff:#ff3030:#559a70:#ccac00:#0099cc:#cc69c8:#7ac4cc:#000000"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Lucy]]
+    allow_bold = False
+    background_color = "#1a1b23"
+    cursor_color = "#af98e6"
+    foreground_color = "#96979b"
+    icon_bell = False
+    palette = "#2e3436:#fb7da7:#76c5a4:#e8d56d:#3465a4:#af98e6:#56c9db:#d3d7cf:#555753:#fb7da7:#76c5a4:#e8d56d:#729fcf:#af98e6:#56c9db:#eeeeec"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[MaterialDark]]
+    allow_bold = False
+    background_color = "#232322"
+    cursor_color = "#16afca"
+    foreground_color = "#e5e5e5"
+    icon_bell = False
+    palette = "#212121:#b7141f:#457b24:#f6981e:#134eb2:#560088:#0e717c:#efefef:#424242:#e83b3f:#7aba3a:#ffea2e:#54a4f3:#aa4dbc:#26bbd1:#d9d9d9"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Miu]]
+    allow_bold = False
+    background_color = "#0d1926"
+    cursor_color = "#d7dee4"
+    foreground_color = "#d9e6f2"
+    icon_bell = False
+    palette = "#000000:#b87a7a:#7ab87a:#b8b87a:#7a7ab8:#b87ab8:#7ab8b8:#d9d9d9:#262626:#dbbdbd:#bddbbd:#dbdbbd:#bdbddb:#dbbddb:#bddbdb:#ffffff"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Molokai]]
+    allow_bold = False
+    background_color = "#121212"
+    cursor_color = "#bbbbbb"
+    foreground_color = "#bbbbbb"
+    icon_bell = False
+    palette = "#121212:#fa2573:#98e123:#dfd460:#1080d0:#8700ff:#43a8d0:#bbbbbb:#555555:#f6669d:#b1e05f:#fff26d:#00afff:#af87ff:#51ceff:#ffffff"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[MonaLisa]]
+    allow_bold = False
+    background_color = "#120b0d"
+    cursor_color = "#c46c32"
+    foreground_color = "#f7d66a"
+    icon_bell = False
+    palette = "#351b0e:#9b291c:#636232:#c36e28:#515c5d:#9b1d29:#588056:#f7d75c:#874228:#ff4331:#b4b264:#ff9566:#9eb2b4:#ff5b6a:#8acd8f:#ffe598"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Monokai Soda]]
+    allow_bold = False
+    background_color = "#1a1a1a"
+    cursor_color = "#f6f7ec"
+    foreground_color = "#c4c5b5"
+    icon_bell = False
+    palette = "#1a1a1a:#f4005f:#98e024:#fa8419:#9d65ff:#f4005f:#58d1eb:#c4c5b5:#625e4c:#f4005f:#98e024:#e0d561:#9d65ff:#f4005f:#58d1eb:#f6f6ef"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[One dark]]
+    allow_bold = False
+    background_color = "#1e2127"
+    cursor_color = "#676c76"
+    foreground_color = "#5c6370"
+    icon_bell = False
+    palette = "#000000:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#abb2bf:#5c6370:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#fffefe"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Pandora]]
+    allow_bold = False
+    background_color = "#141e43"
+    cursor_color = "#43d58e"
+    foreground_color = "#e1e1e1"
+    icon_bell = False
+    palette = "#000000:#ff4242:#74af68:#ffad29:#338f86:#9414e6:#23d7d7:#e2e2e2:#3f5648:#ff3242:#74cd68:#ffb929:#23d7d7:#ff37ff:#00ede1:#ffffff"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Peppermint]]
+    allow_bold = False
+    cursor_color = "#BBBBBB"
+    foreground_color = "#c7c7c7"
+    icon_bell = False
+    palette = "#353535:#E64569:#89D287:#DAB752:#439ECF:#D961DC:#64AAAF:#B3B3B3:#535353:#E4859A:#A2CCA1:#E1E387:#6FBBE2:#E586E7:#96DCDA:#DEDEDE"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Royal]]
+    allow_bold = False
+    background_color = "#100815"
+    cursor_color = "#524966"
+    foreground_color = "#514968"
+    icon_bell = False
+    palette = "#241f2b:#91284c:#23801c:#b49d27:#6580b0:#674d96:#8aaabe:#524966:#312d3d:#d5356c:#2cd946:#fde83b:#90baf9:#a479e3:#acd4eb:#9e8cbd"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Shaman]]
+    allow_bold = False
+    background_color = "#001015"
+    cursor_color = "#4afcd6"
+    foreground_color = "#405555"
+    icon_bell = False
+    palette = "#012026:#b2302d:#00a941:#5e8baa:#449a86:#00599d:#5d7e19:#405555:#384451:#ff4242:#2aea5e:#8ed4fd:#61d5ba:#1298ff:#98d028:#58fbd6"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Solarized Dark - Patched]]
+    allow_bold = False
+    background_color = "#001e27"
+    cursor_color = "#708284"
+    foreground_color = "#708284"
+    icon_bell = False
+    palette = "#002831:#d11c24:#738a05:#a57706:#2176c7:#c61c6f:#259286:#eae3cb:#475b62:#bd3613:#475b62:#536870:#708284:#5956ba:#819090:#fcf4dc"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Square]]
+    allow_bold = False
+    background_color = "#1a1a1a"
+    cursor_color = "#fcfbcc"
+    foreground_color = "#acacab"
+    icon_bell = False
+    palette = "#050505:#e9897c:#b6377d:#ecebbe:#a9cdeb:#75507b:#c9caec:#f2f2f2:#141414:#f99286:#c3f786:#fcfbcc:#b6defb:#ad7fa8:#d7d9fc:#e2e2e2"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Tomorrow Night]]
+    allow_bold = False
+    background_color = "#1d1f21"
+    cursor_color = "#c5c8c6"
+    foreground_color = "#c5c8c6"
+    icon_bell = False
+    palette = "#000000:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff:#000000:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Tomorrow Night Bright]]
+    allow_bold = False
+    cursor_color = "#eaeaea"
+    foreground_color = "#eaeaea"
+    icon_bell = False
+    palette = "#000000:#d54e53:#b9ca4a:#e7c547:#7aa6da:#c397d8:#70c0b1:#ffffff:#000000:#d54e53:#b9ca4a:#e7c547:#7aa6da:#c397d8:#70c0b1:#ffffff"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Venom]]
+    allow_bold = False
+    background_color = "#060d14"
+    cursor_color = "#9ecfa2"
+    foreground_color = "#668198"
+    icon_bell = False
+    palette = "#2e3436:#e94759:#9ecfa2:#f3efa9:#00898d:#9c21b0:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Violet Light]]
+    allow_bold = False
+    background_color = "#fcf4dc"
+    cursor_color = "#536870"
+    foreground_color = "#536870"
+    icon_bell = False
+    palette = "#56595c:#c94c22:#85981c:#b4881d:#2e8bce:#d13a82:#32a198:#d3d0c9:#45484b:#bd3613:#738a04:#a57705:#2176c7:#c61c6f:#259286:#c9c6bd"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Wombat]]
+    allow_bold = False
+    background_color = "#171717"
+    cursor_color = "#bbbbbb"
+    foreground_color = "#dedacf"
+    icon_bell = False
+    palette = "#000000:#ff615a:#b1e969:#ebd99c:#5da9f6:#e86aff:#82fff7:#dedacf:#313131:#f58c80:#ddf88f:#eee5b2:#a5c7ff:#ddaaff:#b7fff9:#ffffff"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[Wryan]]
+    allow_bold = False
+    background_color = "#101010"
+    cursor_color = "#9e9ecb"
+    foreground_color = "#999993"
+    icon_bell = False
+    palette = "#333333:#8c4665:#287373:#7c7c99:#395573:#5e468c:#31658c:#899ca1:#3d3d3d:#bf4d80:#53a6a6:#9e9ecb:#477ab3:#7e62b3:#6096bf:#c0c0c0"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
