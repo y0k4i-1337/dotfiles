@@ -85,22 +85,24 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
     git
     bundler
+    colorize
     common-aliases
     cp
     cpanm
     docker
     encode64
     extract
-    gem
     git-extras
     history
+    pyenv
     python
+    rbenv
     ruby
-    rvm
     sublime
     sudo
     systemd
     urltools
+    web-search
     # custom plugins
     zsh-autosuggestions
     zsh-syntax-highlighting
@@ -149,6 +151,10 @@ eval $(keychain --eval --quiet --confhost --noask --nogui)
 eval $(luarocks path --no-bin)
 path=(${HOME}/.luarocks/bin $path)
 
+# Python virtual environments
+export WORKON_HOME=~/.venvs
+eval "$(pipenv --completion)"
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -168,7 +174,3 @@ path=(${HOME}/.luarocks/bin $path)
 [[ -r ${HOME}/.hashrc ]] && . ${HOME}/.hashrc
 [[ -r ${HOME}/.hashrc.local ]] && . ${HOME}/.hashrc.local
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-path=($path ${HOME}/.rvm/bin)
-# Load RVM into a shell session *as a function*
-[[ -s "${HOME}/.rvm/scripts/rvm" ]] && . "${HOME}/.rvm/scripts/rvm"
