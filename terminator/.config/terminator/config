@@ -1,11 +1,17 @@
 [global_config]
+  always_split_with_profile = True
   enabled_plugins = TerminatorThemes, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   geometry_hinting = True
   inactive_color_offset = 0.451127819549
   title_font = Hack Nerd Font Mono 12
   title_hide_sizetext = True
 [keybindings]
+  close_window = None
+  cycle_next = <Primary>Page_Up
+  cycle_prev = <Primary>Page_Down
   next_profile = <Alt>p
+  next_tab = <Primary>Tab
+  prev_tab = <Primary><Shift>Tab
   previous_profile = <Shift><Alt>p
 [layouts]
   [[default]]
