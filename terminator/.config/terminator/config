@@ -1,6 +1,6 @@
 [global_config]
   always_split_with_profile = True
-  enabled_plugins = TerminatorThemes, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  enabled_plugins = TerminatorThemes,
   geometry_hinting = True
   inactive_color_offset = 0.451127819549
   title_font = Hack Nerd Font Mono 12
@@ -16,6 +16,7 @@
 [layouts]
   [[default]]
     [[[child1]]]
+      directory = ~
       parent = window0
       profile = default
       type = Terminal
