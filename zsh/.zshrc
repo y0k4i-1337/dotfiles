@@ -94,9 +94,7 @@ plugins=(
     extract
     git-extras
     history
-    pyenv
     python
-    rbenv
     ruby
     sublime
     sudo
@@ -120,6 +118,10 @@ setopt rcquotes
 
 ## ask for confirmation every time I bang (!!) a command
 #setopt histverify
+
+## History file configuration
+HISTSIZE=5000
+SAVEHIST=5000
 
 ## remove extra spaces and tabs from history entries
 setopt hist_reduce_blanks
@@ -148,12 +150,15 @@ export ARCHFLAGS="-arch x86_64"
 eval $(keychain --eval --quiet --confhost --noask --nogui)
 
 # Enable luarocks
-eval $(luarocks path --no-bin)
+eval "$(luarocks path --no-bin)"
 path=(${HOME}/.luarocks/bin $path)
 
-# Python virtual environments
+# Ruby virtual environments (rbenv)
+eval "$(rbenv init - --no-rehash zsh)"
+
+# Python virtual environments (pyenv)
 export WORKON_HOME=~/.venvs
-eval "$(pipenv --completion)"
+eval "$(pyenv init - --no-rehash zsh)"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh

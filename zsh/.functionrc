@@ -84,6 +84,11 @@ showINC ()    { perl -e 'for (@INC) { printf "%d %s\n", $i++, $_ }' }
 vimpm ()      { vim `perldoc -l $1 | sed -e 's/pod$/pm/'` }
 vimhelp ()    { vim -c "help $1" -c on -c "au! VimEnter *" }
 
+#----------------------------------------------------------
+# Virtual Environments Utils 
+#----------------------------------------------------------
+# Ruby
+#
 # Change to a given Ruby's gem directory
 function gemdir {
   if [[ -z "$1" ]] ; then
@@ -95,6 +100,38 @@ function gemdir {
   fi
 }
 
+
+function current_ruby() {
+    echo "$(rbenv version-name)"
+}
+
+function current_gemset() {
+    echo "$(rbenv gemset active 2&>/dev/null | sed -e ":a" -e '$ s/\n/+/gp;N;b a' | head -n1)"
+}
+
+function gems() {
+    local rbenv_path=$(rbenv prefix)
+    gem list $@ | sed -E \
+        -e "s/\([0-9a-z, \.]+( .+)?\)/$fg[blue]&$reset_color/g" \
+        -e "s|$(echo $rbenv_path)|$fg[magenta]\$rbenv_path$reset_color|g" \
+        -e "s/$current_ruby@global/$fg[yellow]&$reset_color/g" \
+        -e "s/$current_ruby$current_gemset$/$fg[green]&$reset_color/g"
+}
+
+function rbenv_prompt_info() {
+    if [[ -n $(current_gemset) ]] ; then
+        echo "$(current_ruby)@$(current_gemset)"
+    else
+        echo "$(current_ruby)"
+    fi
+}
+
+# Python
+#
+# Show currently selected Python versions
+function pyenv_prompt_info() {
+    echo "$(pyenv version-name)"
+}
 # Reload GTK Theme
 function reload_gtk_theme() {
   theme=$(gsettings get org.gnome.desktop.interface gtk-theme)

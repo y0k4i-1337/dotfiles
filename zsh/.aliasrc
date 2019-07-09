@@ -75,3 +75,9 @@ alias yarmorph='yay -Rns $(yay -Qtdq)'      # Remove all orphaned packages, incl
 alias yafiles='yay -Fs'                     # Search package file names for matching strings
 alias yals='yay -Ql'                        # List files in package
 alias yaown='yay -Qo'                       # Show which package own a file
+
+#--------------------------------------------
+#            Ruby (rbenv)                   #
+#--------------------------------------------
+alias rubies="rbenv versions"
+alias gemsets="rbenv gemset list"
