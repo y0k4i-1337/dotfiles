@@ -11,6 +11,8 @@
   cycle_prev = <Primary>Page_Down
   next_profile = <Alt>p
   next_tab = <Primary>Tab
+  page_down = <Shift>Page_Down
+  page_up = <Shift>Page_Up
   prev_tab = <Primary><Shift>Tab
   previous_profile = <Shift><Alt>p
 [layouts]
