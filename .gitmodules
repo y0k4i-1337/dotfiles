@@ -12,3 +12,9 @@
 [submodule "oh-my-zsh/.oh-my-zsh/custom/themes/powerlevel9k"]
 	path = oh-my-zsh/.oh-my-zsh/custom/themes/powerlevel9k
 	url = https://github.com/bhilburn/powerlevel9k.git
+[submodule "vim/.vim/bundle/jedi-vim"]
+	path = vim/.vim/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "vim/.vim/bundle/nerdtree"]
+	path = vim/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
