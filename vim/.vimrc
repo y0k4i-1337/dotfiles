@@ -1,113 +1,103 @@
-" based on blackarch config by noptrix & elken
+" based on blackarch config by noptrix (noptrix@nullsecurity.net)
 
-" Preamble ---------------------------------------------------------------- {{{
-
-set nocompatible               " be iMproved
-filetype off                   " required!
- if has('vim_starting')
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
- endif
-
- call neobundle#rc(expand('~/.vim/bundle/'))
-" }}}
-" Basic options ----------------------------------------------------------- {{{
+" yeah baby
+execute pathogen#infect()
 
 " file type and syntax highliting on
 filetype plugin indent on
 syntax on
 
+" whitespaces
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=cyan guibg=cyan
+autocmd InsertLeave * redraw!
+match ExtraWhitespace /\s\+$\| \+\ze\t/
+autocmd BufWritePre * :%s/\s\+$//e
+
+" color scheme {{{
+color leet2
+if &diff
+  color apprentice
+endif
+" }}}
+
+" sessions
+noremap <F1> :mksession! .vim.session <cr>
+noremap <F2> :source .vim.session <cr>
+noremap <F3> :! rm .vim.session <cr>
+
+" for autoread to auto load
+au FocusGained,BufEnter * :silent! !
+au FocusLost,WinLeave * :silent! w
+
 " specific settings
+set t_Co=256
 set nocursorline
 set title
+set bs=2
 set noautoindent
 set ruler
 set shortmess=aoOTI
+set nocompatible
 set showmode
 set splitbelow
 set splitright
-set laststatus=2
 set nomodeline
 set showcmd
 set showmatch
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set cinoptions=(0,m1,:1
-set formatoptions=tcqr2
+set tw=80
+set formatoptions=tcqro2
+set smartindent
 set laststatus=2
 set nomodeline
 set clipboard=unnamed
-set softtabstop=4
+set softtabstop=2
 set showtabline=1
-set smartcase
 set sidescroll=5
 set scrolloff=4
 set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set foldmethod=marker
 set ttyfast
 set history=10000
 set hidden
+set colorcolumn=80
 set number
-set backspace=indent,eol,start
-set ttimeoutlen=100
-
 " Better completion
 set complete=.,w,b,u,t
 set completeopt=longest,menuone,preview
-
-" Leader
-let mapleader = ","
-let maplocalleader = "\\"
-
-" Cursorline {{{
-" Only show cursorline in the current window and in normal mode.
-
-augroup cline
-    au!
-    au WinLeave,InsertEnter * set nocursorline
-    au WinEnter,InsertLeave * set cursorline
-augroup END
-
+set noswapfile
+set foldlevelstart=0
+set wildmenu
+set wildmode=list:longest,full
+set nowrap
+" Statusline {{{
+set statusline=
+set statusline+=[%n]\                                  "buffernr
+set statusline+=\ %<%F\                                "File+path
+set statusline+=\ %y\                                  "FileType
+set statusline+=\ %{''.(&fenc!=''?&fenc:&enc).''}      "Encoding
+set statusline+=\ %{(&bomb?\",BOM\":\"\")}\            "Encoding2
+set statusline+=\ %{&ff}\                              "FileFormat (dos/unix..)
+set statusline+=\ %{&spelllang}\                       "Spellanguage
+set statusline+=\ %=\ row:%l/%L\ (%03p%%)\             "Rownumber/total (%)
+set statusline+=\ col:%03c\                            "Colnr
+set statusline+=%#Tag#
+set statusline+=\ \ %m%r%w\ %P\ \                      "Modified? Readonly?  Top/bot.
 " }}}
+set autoread
+" backup
+set undodir=~/.vim/tmp/undo//
+set backupdir=~/.vim/tmp/backup//
+set directory=~/.vim/tmp/swap//
 
-" Line Return {{{
-
-" Make sure Vim returns to the same line when you reopen a file.
-" Thanks, Amit
-augroup line_return
-    au!
-    au BufReadPost *
-        \ if line("'\"") > 0 && line("'\"") <= line("$") |
-        \     execute 'normal! g`"zvzz' |
-        \ endif
-augroup END
-
-" }}}
-
-" Column limit viewer {{{
-
-augroup collumnLimit
-  autocmd!
-  autocmd BufEnter,WinEnter,FileType cpp,c,py,sh,tex,java
-        \ highlight CollumnLimit ctermbg=DarkRed guibg=DarkGrey
-  let collumnLimit = 79 " feel free to customize
-  let pattern =
-        \ '\%<' . (collumnLimit+1) . 'v.\%>' . collumnLimit . 'v'
-  autocmd BufEnter,WinEnter,FileType cpp,c,py,sh,tex,java 
-        \ let w:m1=matchadd('CollumnLimit', pattern, -1)
-augroup END
-
-" }}}
-
-" Backups {{{
-
-set backup                        " enable backups
-set noswapfile                    " it's 2013, Vim.
-
-set undodir=~/.vim/tmp/undo//     " undo files
-set backupdir=~/.vim/tmp/backup// " backups
-set directory=~/.vim/tmp/swap//   " swap files
-
-" Make those folders automatically if they don't already exist.
+" make directories automatically if they don't already exist
 if !isdirectory(expand(&undodir))
     call mkdir(expand(&undodir), "p")
 endif
@@ -118,38 +108,34 @@ if !isdirectory(expand(&directory))
     call mkdir(expand(&directory), "p")
 endif
 
+" close brackets
+:inoremap ( ()<Esc>i
+:inoremap < <><Esc>i
+:inoremap { {}<Esc>i
+:inoremap [ []<Esc>i
+:inoremap " ""<Esc>i
+:inoremap ' ''<Esc>i
+:inoremap ` ``<Esc>i
+
+" cursorline
+au WinLeave * set nocursorline
+au WinEnter * set cursorline
+set cursorline
+
+" Line Return {{{
+
+" Make sure Vim returns to the same line when you reopen a file.
+" Thanks, Amit
+augroup line_return
+  au!
+  au BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \     execute 'normal! g`"zvzz' |
+    \ endif
+augroup END
+
 " }}}
 
-" Color scheme {{{
-set background=dark
-colorscheme blackarch
-if &diff
-    colorscheme apprentice
-endif
-" }}}
-" Statusline {{{
-set statusline=
-set statusline+=%7*\[%n]                                  "buffernr
-set statusline+=%1*\ %<%F\                                "File+path
-set statusline+=%2*\ %y\                                  "FileType
-set statusline+=%3*\ %{''.(&fenc!=''?&fenc:&enc).''}      "Encoding
-set statusline+=%3*\ %{(&bomb?\",BOM\":\"\")}\            "Encoding2
-set statusline+=%4*\ %{&ff}\                              "FileFormat (dos/unix..)
-set statusline+=%5*\ %{&spelllang}\                       "Spellanguage
-set statusline+=%8*\ %=\ row:%l/%L\ (%03p%%)\             "Rownumber/total (%)
-set statusline+=%9*\ col:%03c\                            "Colnr
-set statusline+=%0*\ \ %m%r%w\ %P\ \                      "Modified? Readonly?  Top/bot.
-
-
-" }}}
-" Folding {{{
-set foldlevelstart=0
-
-" Space to toggle folds.
-nnoremap <Space> za
-vnoremap <Space> za
-" }}}
-" }}}
 " Mappings ---------------------------------------------------------------- {{{
 " Easy buffer navigation
 noremap <C-h> <C-w>h
@@ -163,66 +149,20 @@ noremap <leader>v <C-w>v
 nnoremap <leader>ev :vsplit ~/.vimrc<cr>
 
 " }}}
-" }}}
-" Plugin settings --------------------------------------------------------- {{{
-" NeoBundle {{{
-NeoBundleFetch 'Shougo/neobundle.vim'
 
-"Github
-NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'terryma/vim-multiple-cursors'
-if has("gui_running")
-    NeoBundle 'Shougo/unite.vim'
-endif
-NeoBundle 'Shougo/vimproc', {'build' : {'unix' : 'make -f make_unix.mal',},}
-" }}}
-" NERD Tree {{{
+" Folding {{{
 
-noremap  <F2> :NERDTreeToggle<cr>
-inoremap <F2> <esc>:NERDTreeToggle<cr>
-
-augroup ps_nerdtree
-     au!
-
-     au Filetype nerdtree setlocal nolist
-augroup END
-
-let NERDTreeHighlightCursorline = 1
-let NERDTreeIgnore = ['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$', 'whoosh_index',
-                                 \ 'xapian_index', '.*.pid', 'monitor.py', '.*-fixtures-.*.json',
-                                  \ '.*\.o$', 'db.db', 'tags.bak', '.*\.pdf$', '.*\.mid$',
-                                  \ '.*\.midi$']
-
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDChristmasTree = 1
-let NERDTreeChDirMode = 2
-let NERDTreeMapJumpFirstChild = 'gK'
+" Space to toggle folds.
+nnoremap <Space> za
+vnoremap <Space> za
 
 " }}}
-" Tagbar {{{
-nnoremap <F9> :TagbarToggle<CR>
-" }}}
-" Unite {{{
-if has("gui_running")
-    nnoremap <C-s> :Unite file_rec/async<cr>
-    nnoremap <leader>/ :Unite grep:.<cr>
-    let g:unite_source_history_yank_enable = 1
-    nnoremap <leader>y :Unite history/yank<cr>
-    nnoremap <leader>b :Unite -quick-match buffer<cr>
-endif
-" }}}
-" }}}
-
-" Enhance diff view
-if &diff
-    highlight! link DiffText MatchParen
-endif
 
 " Useful keymaps {{{
+
 noremap <F7> :w !xclip<CR><CR>
 noremap <S-F7> :r !xclip -o<CR>
+
+" }}}
 
 " }}}
