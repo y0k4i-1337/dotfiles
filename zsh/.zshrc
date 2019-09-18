@@ -153,11 +153,17 @@ eval $(keychain --eval --quiet --confhost --noask --nogui)
 eval "$(luarocks path --no-bin)"
 path=(${HOME}/.luarocks/bin $path)
 
+# Initialize perlbrew
+if [ -f "${HOME}/perl5/perlbrew/etc/bashrc" ]; then
+    . "${HOME}/perl5/perlbrew/etc/bashrc"
+fi
+
 # Ruby virtual environments (rbenv)
 eval "$(rbenv init - --no-rehash zsh)"
 
 # Python virtual environments (pyenv)
 export WORKON_HOME=~/.venvs
+export PIPENV_VENV_IN_PROJECT=1
 eval "$(pyenv init - --no-rehash zsh)"
 
 # >>> conda initialize >>>

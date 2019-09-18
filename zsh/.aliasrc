@@ -81,3 +81,12 @@ alias yaown='yay -Qo'                       # Show which package own a file
 #--------------------------------------------
 alias rubies="rbenv versions"
 alias gemsets="rbenv gemset list"
+
+#--------------------------------------------
+#            Python (pyenv)                 #
+#--------------------------------------------
+alias pythons="pyenv versions"
+alias venvs="pyenv virtualenvs"
+alias pych="pyenv which"
+alias pyce="pyenv whence"
+
