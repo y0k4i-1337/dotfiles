@@ -1,7 +1,12 @@
 # dotfiles
 Here is a list of my configuration files.
 ```
+audio       > alsa and pulse audio config
 awesome     > a dynamic window manager
+misc        > miscellaneous (e.g. config for curl)
+nemo        > file manager
+oh-my-zsh   > custom configuration
+terminator  > terminal emulator
 vim         > text editor config
 zsh         > zsh with Oh My Zsh framework
 ```
