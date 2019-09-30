@@ -8,6 +8,7 @@ nemo        > file manager
 oh-my-zsh   > custom configuration
 terminator  > terminal emulator
 vim         > text editor config
+X11         > X Window System
 zsh         > zsh with Oh My Zsh framework
 ```
 

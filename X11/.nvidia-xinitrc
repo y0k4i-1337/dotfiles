@@ -1,0 +1,19 @@
+#
+# nvidia-xinitrc
+#
+# This file is usually sourced by nvidia-xrun after all other
+# X11 resources have been properly merged
+# See /etc/X11/xinit/nvidia-xinitrc
+#
+# Set environment
+XDG_SESSION_TYPE_OLD=${XDG_SESSION_TYPE}
+export XDG_SESSION_TYPE=X11
+
+if [ $# -gt 0 ]; then
+	$*
+else
+	exec awesome
+fi
+
+# Reset environment
+export XDG_SESSION_TYPE=${XDG_SESSION_TYPE_OLD}
