@@ -68,6 +68,15 @@ hex() {
     fi
 }
 
+# Merge pdf files using Ghostscript
+# Usage: pdfmerge output.pdf file1.pdf file2.pdf ... filen.pdf
+pdfmerge() {
+  #gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/default \
+  #-dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages -dCompressFonts=true \
+  #-r150 -sOutputFile=$@
+  gs -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -o $@
+}
+
 ## Some quick Perl-hacks aka /useful/ oneliner
 #bew() { perl -le 'print unpack "B*","'$1'"' }
 #web() { perl -le 'print pack "B*","'$1'"' }
@@ -85,7 +94,7 @@ vimpm ()      { vim `perldoc -l $1 | sed -e 's/pod$/pm/'` }
 vimhelp ()    { vim -c "help $1" -c on -c "au! VimEnter *" }
 
 #----------------------------------------------------------
-# Virtual Environments Utils 
+# Virtual Environments Utils
 #----------------------------------------------------------
 # Ruby
 #
