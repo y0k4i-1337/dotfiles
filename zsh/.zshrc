@@ -147,11 +147,15 @@ export ARCHFLAGS="-arch x86_64"
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Enable keychain
-eval $(keychain --eval --quiet --confhost --noask --nogui)
+if [ $+commands[keychain] ]; then
+  eval $(keychain --eval --quiet --confhost --noask --nogui)
+fi
 
 # Enable luarocks
-eval "$(luarocks path --no-bin)"
-path=(${HOME}/.luarocks/bin $path)
+if [[ $+commands[luarocks] && -d ${HOME}/.luarocks ]]; then
+  eval "$(luarocks path --no-bin)"
+  path=(${HOME}/.luarocks/bin $path)
+fi
 
 # Initialize perlbrew
 if [ -f "${HOME}/perl5/perlbrew/etc/bashrc" ]; then
@@ -159,27 +163,35 @@ if [ -f "${HOME}/perl5/perlbrew/etc/bashrc" ]; then
 fi
 
 # Ruby virtual environments (rbenv)
-eval "$(rbenv init - --no-rehash zsh)"
+if [ $+commands[rbenv] ]; then
+  eval "$(rbenv init - --no-rehash zsh)"
+fi
 
 # Python virtual environments (pyenv)
-export WORKON_HOME=~/.venvs
-export PIPENV_VENV_IN_PROJECT=1
-eval "$(pyenv init - --no-rehash zsh)"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$("${HOME}/miniconda3/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "${HOME}/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "${HOME}/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="${HOME}/miniconda3/bin:$PATH"
-    fi
+if [ $+commands[pyenv] ]; then
+  export WORKON_HOME=~/.venvs
+  export PIPENV_VENV_IN_PROJECT=1
+  eval "$(pyenv init - --no-rehash zsh)"
 fi
-unset __conda_setup
-# <<< conda initialize <<<
+
+# Conda setup
+if [ -d ${HOME}/miniconda3 ]; then
+  # >>> conda initialize >>>
+  # !! Contents within this block are managed by 'conda init' !!
+  __conda_setup="$("${HOME}/miniconda3/bin/conda" 'shell.zsh' 'hook' \
+                  2> /dev/null)"
+  if [ $? -eq 0 ]; then
+      eval "$__conda_setup"
+  else
+      if [ -f "${HOME}/miniconda3/etc/profile.d/conda.sh" ]; then
+          . "${HOME}/miniconda3/etc/profile.d/conda.sh"
+      else
+          export PATH="${HOME}/miniconda3/bin:$PATH"
+      fi
+  fi
+  unset __conda_setup
+  # <<< conda initialize <<<
+fi
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
