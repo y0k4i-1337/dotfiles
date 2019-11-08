@@ -74,6 +74,9 @@ fi
 # see 'man strftime' for details.
 HIST_STAMPS="yyyy-mm-dd"
 
+# Enable lazy load for nvm plugin
+export NVM_LAZY_LOAD=true
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -103,6 +106,7 @@ plugins=(
     web-search
     # custom plugins
     zsh-autosuggestions
+    zsh-nvm
     zsh-syntax-highlighting
 )
 
