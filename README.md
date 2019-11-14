@@ -52,6 +52,7 @@ framework with the following custom theme and plugins:
 
 #### Oh My Zsh custom plugins
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+* [zsh-nvm](https://github.com/lukechilds/zsh-nvm)
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ## Manual Installation
