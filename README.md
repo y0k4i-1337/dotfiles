@@ -7,6 +7,7 @@ linters     > configuration for linters (e.g. flake8)
 misc        > miscellaneous (e.g. config for curl)
 nemo        > file manager
 oh-my-zsh   > custom configuration
+rbenv       > Ruby versions manager
 terminator  > terminal emulator
 vim         > text editor config
 X11         > X Window System
