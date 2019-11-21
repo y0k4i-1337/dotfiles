@@ -3,6 +3,7 @@ Here is a list of my configuration files.
 ```
 audio       > alsa and pulse audio config
 awesome     > a dynamic window manager
+linters     > configuration for linters (e.g. flake8)
 misc        > miscellaneous (e.g. config for curl)
 nemo        > file manager
 oh-my-zsh   > custom configuration
@@ -37,11 +38,11 @@ Besides, here are specific dependencies and/or important notes about
 each program (when needed).
 
 ### awesome
-This config is basically the same as the original 
+This config is basically the same as the original
 [worron's awesome-config](https://github.com/worron/awesome-config)
 with some personal customization. In order to easily track the updates
-from the original repo, I commit my changes in a specific branch. 
-For more information, please have a look at 
+from the original repo, I commit my changes in a specific branch.
+For more information, please have a look at
 [my awesome-config](https://github.com/mchoji/awesome-config).
 
 ### zsh
@@ -71,7 +72,7 @@ stow -t /root vim
 **Note:** `stow` will only create a symlink if a _config_ file doesn't already exist. You must delete/backup if there is a default _config_ for a program.
 
 **Tip:** If you are unsure about running `stow`, you might use `-n` and
-`-v` options together. This will make it run in dry-run mode and show 
+`-v` options together. This will make it run in dry-run mode and show
 detailed output. Example:
 ```
 stow -nv vim
@@ -110,7 +111,7 @@ This is free and unencumbered software released into the public domain.
 See the [LICENSE](LICENSE) file for details.
 
 **Note:** the aforementioned license applies exclusively to my configuration files.
-Please refer to the appropriate project's license when using any of 
+Please refer to the appropriate project's license when using any of
 those (_e.g._ [stow](https://www.gnu.org/software/stow/),
 [vim](https://www.vim.org/),
 [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)).
