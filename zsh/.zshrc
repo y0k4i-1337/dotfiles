@@ -99,12 +99,12 @@ plugins=(
     history
     python
     ruby
-    sublime
     sudo
     systemd
     urltools
     web-search
     # custom plugins
+    sublimetext
     zsh-autosuggestions
     zsh-nvm
     zsh-syntax-highlighting
@@ -173,10 +173,9 @@ fi
 
 # Python virtual environments (pyenv)
 if [ $+commands[pyenv] ]; then
-  export WORKON_HOME=~/.venvs
-  export PIPENV_VENV_IN_PROJECT=1
   eval "$(pyenv init - --no-rehash zsh)"
 fi
+export PIPENV_VENV_IN_PROJECT=1
 
 # Conda setup
 if [ -d ${HOME}/.miniconda3 ]; then
