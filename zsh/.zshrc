@@ -130,7 +130,7 @@ SAVEHIST=5000
 ## remove extra spaces and tabs from history entries
 setopt hist_reduce_blanks
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="$HOME/man:$MANPATH"
 
 # You may need to manually set your language environment
 export LANG=en_GB.UTF-8
