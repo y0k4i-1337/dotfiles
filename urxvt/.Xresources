@@ -46,10 +46,10 @@ URxvt.tabbedex.title-bg:  0
 URxvt.tabbedex.title-fg:  italic 6
 
 !! URxvt Appearance
-URxvt.font: xft:Hack\ Nerd\ Font\ Mono:size=12
-URxvt.boldFont: xft:Hack\ Nerd\ Font\ Mono:style=Regular:size=12
-URxvt.italicFont: xft:Hack\ Nerd\ Font\ Mono:style=Italic:size=12
-URxvt.boldItalicfont: xft:Hack\ Nerd\ Font\ Mono:style=Italic:size=12
+URxvt.font: xft:RobotoMono\ Nerd\ Font\ Mono:size=12
+URxvt.boldFont: xft:RobotoMono\ Nerd\ Font\ Mono:style=Regular:size=12
+URxvt.italicFont: xft:RobotoMono\ Nerd\ Font\ Mono:style=Italic:size=12
+URxvt.boldItalicfont: xft:RobotoMono\ Nerd\ Font\ Mono:style=Italic:size=12
 URxvt.letterSpace: 0
 URxvt.lineSpace: 2
 URxvt.geometry: 92x24

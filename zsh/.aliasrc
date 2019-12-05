@@ -9,7 +9,7 @@
 ## Execute \kbd{./configure --help}
 #alias CH="./configure --help"
 
-## Go to uplevel 
+## Go to uplevel
 alias ....='cd ../../..'
 alias .3='cd ../../../'                     # Go back 3 directory levels
 alias .4='cd ../../../../'                  # Go back 4 directory levels
@@ -35,7 +35,11 @@ alias fix_stty='stty sane'
 alias path='echo -e ${PATH//:/\\n}'
 
 # c: Clear terminal display
-alias c='clear' 
+alias c='clear'
+
+# sfetch: a not so verbose screenfetch
+alias sfetch="screenfetch -d \
+'-host;-disk;-cpu;-gpu;-mem;-wmtheme;-res;-pkgs;-uptime'"
 
 #lr: Full Recursive Directory Listing
 #   ------------------------------------------
