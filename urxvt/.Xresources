@@ -1,0 +1,116 @@
+!! Colorscheme
+
+! special
+*.foreground:   #a39e9b
+*.background:   #2f1e2e
+*.cursorColor:  #a39e9b
+
+! black
+*.color0:       #2f1e2e
+*.color8:       #776e71
+
+! red
+*.color1:       #ef6155
+*.color9:       #ef6155
+
+! green
+*.color2:       #48b685
+*.color10:      #48b685
+
+! yellow
+*.color3:       #fec418
+*.color11:      #fec418
+
+! blue
+*.color4:       #06b6ef
+*.color12:      #06b6ef
+
+! magenta
+*.color5:       #815ba4
+*.color13:      #815ba4
+
+! cyan
+*.color6:       #5bc4bf
+*.color14:      #5bc4bf
+
+! white
+*.color7:       #a39e9b
+*.color15:      #e7e9db
+
+!! Tabbedex Appearance
+URxvt.tabbedex.tabbar-fg: 7
+URxvt.tabbedex.tabbar-bg: 0
+URxvt.tabbedex.tab-bg:    0
+URxvt.tabbedex.tab-fg:    bold 12
+URxvt.tabbedex.title-bg:  0
+URxvt.tabbedex.title-fg:  italic 6
+
+!! URxvt Appearance
+URxvt.font: xft:Hack\ Nerd\ Font\ Mono:size=12
+URxvt.boldFont: xft:Hack\ Nerd\ Font\ Mono:style=Regular:size=12
+URxvt.italicFont: xft:Hack\ Nerd\ Font\ Mono:style=Italic:size=12
+URxvt.boldItalicfont: xft:Hack\ Nerd\ Font\ Mono:style=Italic:size=12
+URxvt.letterSpace: 0
+URxvt.lineSpace: 2
+URxvt.geometry: 92x24
+URxvt.internalBorder: 2
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+
+!! Scrollback buffer in secondary screen
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+
+!! Make Ctrl+Shift to work
+URxvt.iso14755:     false
+!URxvt*iso14755_52:  False
+
+!! Copy Paste & Other Extensions
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,tabbedex
+URxvt.url-select.launcher:  firefox
+URxvt.url-select.underline: true
+URxvt.urlButton:            1
+URxvt.copyCommand:          xclip -i -selection clipboard
+URxvt.pasteCommand:         xclip -o -selection clipboard
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
+URxvt.keysym.M-c:           perl:clipboard:copy
+URxvt.keysym.M-v:           perl:clipboard:paste
+URxvt.keysym.M-C-v:         perl:clipboard:paste_escaped
+URxvt.keyboard-select.clipboard: true
+URxvt.clipboard.autocopy:   true
+URxvt.tabbedex.no-tabbedex-keys: yes
+
+!! Common Keybinds for Navigations
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Right: \033[1;5C
+URxvt.keysym.Control-Left: \033[1;5D
+!  Keybinds for Tabbedex
+URxvt.keysym.Shift-Left:    tabbedex:prev_tab
+URxvt.keysym.C-ISO_Left_Tab:       tabbedex:prev_tab
+URxvt.keysym.Shift-Right:   tabbedex:next_tab
+URxvt.keysym.C-Tab:         tabbedex:next_tab
+URxvt.keysym.C-t:           tabbedex:new_tab
+URxvt.keysym.F2:            tabbedex:rename_tab
+URxvt.keysym.C-S-Left:      tabbedex:move_tab_left
+URxvt.keysym.C-S-Right:     tabbedex:move_tab_right
+URxvt.keysym.Meta-1:        tabbedex:goto_tab_1
+URxvt.keysym.Meta-2:        tabbedex:goto_tab_2
+URxvt.keysym.Meta-3:        tabbedex:goto_tab_3
+URxvt.keysym.Meta-4:        tabbedex:goto_tab_4
+URxvt.keysym.Meta-5:        tabbedex:goto_tab_5
+URxvt.keysym.Meta-6:        tabbedex:goto_tab_6
+URxvt.keysym.Meta-7:        tabbedex:goto_tab_7
+URxvt.keysym.Meta-8:        tabbedex:goto_tab_8
+URxvt.keysym.Meta-9:        tabbedex:goto_tab_9
+URxvt.keysym.Meta-0:        tabbedex:goto_tab_10
+
