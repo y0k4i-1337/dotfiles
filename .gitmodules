@@ -21,3 +21,6 @@
 [submodule "oh-my-zsh/.oh-my-zsh/custom/plugins/zsh-nvm"]
 	path = oh-my-zsh/.oh-my-zsh/custom/plugins/zsh-nvm
 	url = https://github.com/lukechilds/zsh-nvm
+[submodule "urxvt/.urxvt/tabbedex"]
+	path = urxvt/.urxvt/tabbedex
+	url = https://github.com/mina86/urxvt-tabbedex
