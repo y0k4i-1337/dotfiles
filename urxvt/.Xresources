@@ -2,11 +2,11 @@
 
 ! special
 *.foreground:   #a39e9b
-*.background:   #2f1e2e
+*.background:   #1a111a
 *.cursorColor:  #a39e9b
 
 ! black
-*.color0:       #2f1e2e
+*.color0:       #1a111a
 *.color8:       #776e71
 
 ! red
@@ -15,7 +15,7 @@
 
 ! green
 *.color2:       #48b685
-*.color10:      #48b685
+*.color10:      #49c383
 
 ! yellow
 *.color3:       #fec418
@@ -34,8 +34,12 @@
 *.color14:      #5bc4bf
 
 ! white
-*.color7:       #a39e9b
+*.color7:       #dcdad9
 *.color15:      #e7e9db
+
+!! Load extensions
+URxvt.perl-ext-common: default,clipboard,url-select,\
+keyboard-select,tabbedex,resize-font
 
 !! Tabbedex Appearance
 URxvt.tabbedex.tabbar-fg: 7
@@ -70,8 +74,10 @@ URxvt.secondaryScroll: 0
 URxvt.iso14755:     false
 !URxvt*iso14755_52:  False
 
+!! Define delimiter chars when moving between words
+URxvt.cutchars: "\\`\"'&()*,;<=>?@[]^{|}.#%+!/:-"
+
 !! Copy Paste & Other Extensions
-URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,tabbedex
 URxvt.url-select.launcher:  firefox
 URxvt.url-select.underline: true
 URxvt.urlButton:            1

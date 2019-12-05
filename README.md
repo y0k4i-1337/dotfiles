@@ -9,6 +9,7 @@ nemo        > file manager
 oh-my-zsh   > custom configuration
 rbenv       > Ruby versions manager
 terminator  > terminal emulator
+urxvt       > a VT102 emulator for the X window system
 vim         > text editor config
 X11         > X Window System
 zsh         > zsh with Oh My Zsh framework
@@ -45,6 +46,23 @@ with some personal customization. In order to easily track the updates
 from the original repo, I commit my changes in a specific branch.
 For more information, please have a look at
 [my awesome-config](https://github.com/mchoji/awesome-config).
+
+### urxvt
+`urxvt` is customized via [Xresources](urxvt/.Xresources).
+
+[terminal.sexy](https://terminal.sexy/) is a great online tool to tweak with the appearance of your terminal emulator.
+
+Plugins can be installed either by system package manager or manually.
+Following are the ones I recommend.
+
+#### Plugins installed via package manager
+* [rxvt-unicode-terminfo](http://software.schmorp.de/pkg/rxvt-unicode.html)
+* [urxvt-resize-font](https://github.com/simmel/urxvt-resize-font)
+* [urxvt-perls](http://www.github.com/muennich/urxvt-perls)
+
+#### Plugins installed manually
+I have installed [tabbedex](https://github.com/mina86/urxvt-tabbedex) manually mostly because the version from the package manager is outdated.
+* [tabbedex](https://github.com/mina86/urxvt-tabbedex)
 
 ### zsh
 This `zsh` config relies on [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
@@ -104,8 +122,8 @@ Here are some screenshots taken from current programs setup.
 ### vim
 ![vim](https://raw.githubusercontent.com/mchoji/dotfiles/a972b2c5c1131fd9e0eb4fa88b7945a0394273bb/vim.png)
 
-### zsh
-![zsh](https://raw.githubusercontent.com/mchoji/dotfiles/6194ce0af609e0ef77c6ecc6c692205d1f67f8d8/zsh.png)
+### zsh on urxvt
+![zsh+urxvt](https://raw.githubusercontent.com/mchoji/dotfiles/3e1ecae9cc74f7033ad48d6275c50c0b935c62b1/urxvt+zsh.png)
 
 ## License
 This is free and unencumbered software released into the public domain.
