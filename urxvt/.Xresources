@@ -55,9 +55,9 @@ URxvt.boldFont: xft:RobotoMono\ Nerd\ Font\ Mono:style=Regular:size=12
 URxvt.italicFont: xft:RobotoMono\ Nerd\ Font\ Mono:style=Italic:size=12
 URxvt.boldItalicfont: xft:RobotoMono\ Nerd\ Font\ Mono:style=Italic:size=12
 URxvt.letterSpace: 0
-URxvt.lineSpace: 2
+URxvt.lineSpace: 0
 URxvt.geometry: 92x24
-URxvt.internalBorder: 2
+URxvt.internalBorder: 0
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: false
 URxvt.saveline: 2048
@@ -75,7 +75,8 @@ URxvt.iso14755:     false
 !URxvt*iso14755_52:  False
 
 !! Define delimiter chars when moving between words
-URxvt.cutchars: "\\`\"'&()*,;<=>?@[]^{|}.#%+!/:-"
+URxvt.cutchars: "-,./?%&#:_"
+!URxvt.cutchars: "\\`\"'&()*,;<=>?@[]^{|}.#%+!/:-"
 
 !! Copy Paste & Other Extensions
 URxvt.url-select.launcher:  firefox
