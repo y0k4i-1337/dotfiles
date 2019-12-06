@@ -11,6 +11,7 @@
 
 ## Go to uplevel
 alias ....='cd ../../..'
+alias .2='cd ../../'
 alias .3='cd ../../../'                     # Go back 3 directory levels
 alias .4='cd ../../../../'                  # Go back 4 directory levels
 alias .5='cd ../../../../../'               # Go back 5 directory levels
