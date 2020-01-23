@@ -10,7 +10,7 @@
 *.color8:       #776e71
 
 ! red
-*.color1:       #ef6155
+*.color1:       #c30a1c
 *.color9:       #ef6155
 
 ! green
@@ -18,19 +18,19 @@
 *.color10:      #49c383
 
 ! yellow
-*.color3:       #fec418
-*.color11:      #fec418
+*.color3:       #e2a901
+*.color11:      #f3b601
 
 ! blue
-*.color4:       #06b6ef
-*.color12:      #06b6ef
+*.color4:       #0484ad
+*.color12:      #059dce
 
 ! magenta
-*.color5:       #815ba4
+*.color5:       #704f8e
 *.color13:      #815ba4
 
 ! cyan
-*.color6:       #5bc4bf
+*.color6:       #3aa19c
 *.color14:      #5bc4bf
 
 ! white
@@ -44,8 +44,8 @@ keyboard-select,tabbedex,resize-font
 !! Tabbedex Appearance
 URxvt.tabbedex.tabbar-fg: 7
 URxvt.tabbedex.tabbar-bg: 0
-URxvt.tabbedex.tab-bg:    0
-URxvt.tabbedex.tab-fg:    bold 12
+URxvt.tabbedex.tab-bg:    1
+URxvt.tabbedex.tab-fg:    15
 URxvt.tabbedex.title-bg:  0
 URxvt.tabbedex.title-fg:  italic 6
 
