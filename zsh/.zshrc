@@ -93,6 +93,7 @@ plugins=(
     cp
     cpanm
     docker
+    docker-compose
     encode64
     extract
     git-extras
