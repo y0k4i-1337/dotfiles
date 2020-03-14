@@ -17,3 +17,4 @@ exclude =
     dist
 
 max-complexity = 10
+max-doc-length = 72
