@@ -15,10 +15,11 @@ POWERLEVEL9K_VCS_GIT_ICON='\ue60a'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
 POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
 #POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
-POWERLEVEL9K_SHOW_CHANGESET='false'
+POWERLEVEL9K_SHOW_CHANGESET='true'
+POWERLEVEL9K_CHANGESET_HASH_LENGTH='7'
 
 # Add context to prompt elements to print user+host info
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status os_icon battery context
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status os_icon battery ssh context
 dir_writable dir vcs root_indicator)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(anaconda virtualenv pyenv rbenv nvm
 docker_machine time background_jobs ram)

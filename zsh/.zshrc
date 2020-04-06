@@ -156,27 +156,33 @@ if [ $+commands[keychain] ]; then
   eval $(keychain --eval --quiet --confhost --noask --nogui)
 fi
 
+
 # Enable luarocks
 if [[ $+commands[luarocks] && -d ${HOME}/.luarocks ]]; then
   eval "$(luarocks path --no-bin)"
   path=(${HOME}/.luarocks/bin $path)
 fi
 
+
 # Initialize perlbrew
 if [ -f "${HOME}/perl5/perlbrew/etc/bashrc" ]; then
     . "${HOME}/perl5/perlbrew/etc/bashrc"
 fi
+
 
 # Ruby virtual environments (rbenv)
 if [ $+commands[rbenv] ]; then
   eval "$(rbenv init - --no-rehash zsh)"
 fi
 
+
 # Python virtual environments (pyenv)
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+export PIPENV_VENV_IN_PROJECT=1
+
 if [ $+commands[pyenv] ]; then
   eval "$(pyenv init - --no-rehash zsh)"
 fi
-export PIPENV_VENV_IN_PROJECT=1
 
 # Conda setup
 if [ -d ${HOME}/.miniconda3 ]; then
