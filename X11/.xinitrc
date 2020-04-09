@@ -4,9 +4,9 @@
 #
 # Executed by startx (run your window manager from here)
 #
-
-userresources=$HOME/.Xresources
-usermodmap=$HOME/.Xmodmap
+CONFIG_DIR=${XDG_CONFIG_HOME:-$HOME/.config}/X11
+userresources=$CONFIG_DIR/xresources
+usermodmap=$CONFIG_DIR/xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
