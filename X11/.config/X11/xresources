@@ -38,8 +38,8 @@
 *.color15:      #e7e9db
 
 !! Load extensions
-URxvt.perl-ext-common: default,clipboard,url-select,\
-keyboard-select,tabbedex,resize-font
+URxvt.perl-ext-common: default,selection-to-clipboard,confirm-paste,matcher,\
+keyboard-select,tabbedex,resize-font,selection-autotransform
 
 !! Tabbedex Appearance
 URxvt.tabbedex.tabbar-fg: 7
@@ -50,7 +50,7 @@ URxvt.tabbedex.title-bg:  0
 URxvt.tabbedex.title-fg:  italic 6
 
 !! URxvt Appearance
-URxvt.font: xft:RobotoMono\ Nerd\ Font\ Mono:size=12
+URxvt.font: xft:RobotoMono Nerd Font Mono:size=12,xft:DejaVu Sans Mono
 URxvt.boldFont: xft:RobotoMono\ Nerd\ Font\ Mono:style=Regular:size=12
 URxvt.italicFont: xft:RobotoMono\ Nerd\ Font\ Mono:style=Italic:size=12
 URxvt.boldItalicfont: xft:RobotoMono\ Nerd\ Font\ Mono:style=Italic:size=12
@@ -78,21 +78,21 @@ URxvt.iso14755:     false
 URxvt.cutchars: "-,./?%&#:_"
 !URxvt.cutchars: "\\`\"'&()*,;<=>?@[]^{|}.#%+!/:-"
 
-!! Copy Paste & Other Extensions
-URxvt.url-select.launcher:  firefox
-URxvt.url-select.underline: true
-URxvt.urlButton:            1
-URxvt.copyCommand:          xclip -i -selection clipboard
-URxvt.pasteCommand:         xclip -o -selection clipboard
-URxvt.keysym.M-u:           perl:url-select:select_next
+!! Settings for matcher
+URxvt.url-launcher:         firefox
+URxvt.keysym.C-Delete:      matcher:last
+URxvt.keysym.M-Delete:      matcher:list
+URxvt.keysym.C-u:           matcher:select
+URxvt.matcher.button:       1
+
+!! keyboard-select extension
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
-URxvt.keysym.M-c:           perl:clipboard:copy
-URxvt.keysym.M-v:           perl:clipboard:paste
-URxvt.keysym.M-C-v:         perl:clipboard:paste_escaped
 URxvt.keyboard-select.clipboard: true
-URxvt.clipboard.autocopy:   true
-URxvt.tabbedex.no-tabbedex-keys: yes
+
+!! selection-autotransform
+! Transform common compiler error message (<file>:<line>) into vim command
+URxvt.selection-autotransform.0: s/^([^:[:space:]]+):(\\d+):?$/vim +$2 \\Q$1\\E\\x0d/
 
 !! Common Keybinds for Navigations
 URxvt.keysym.Shift-Up: command:\033]720;1\007
