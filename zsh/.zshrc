@@ -105,6 +105,7 @@ plugins=(
     urltools
     web-search
     # custom plugins
+    poetry
     sublimetext
     zsh-autosuggestions
     zsh-nvm
