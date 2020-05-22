@@ -1,8 +1,6 @@
 [submodule "awesome/.config/awesome"]
 	path = awesome/.config/awesome
 	url = https://github.com/mchoji/awesome-config.git
-[submodule "awesome"]
-	branch = myruby
 [submodule "oh-my-zsh/.oh-my-zsh/custom/plugins/zsh-autosuggestions"]
 	path = oh-my-zsh/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
