@@ -1,1 +1,2 @@
-</etc/asound.conf>  # include system conf
+#</etc/asound.conf>  # include system conf
+</etc/alsa/conf.d/99-pulseaudio-default.conf> # include system conf
