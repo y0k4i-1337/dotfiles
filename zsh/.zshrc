@@ -103,10 +103,10 @@ plugins=(
     sudo
     systemd
     urltools
+    vscode
     web-search
     # custom plugins
     poetry
-    sublimetext
     zsh-autosuggestions
     zsh-nvm
     zsh-syntax-highlighting
