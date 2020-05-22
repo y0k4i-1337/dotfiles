@@ -1,7 +1,10 @@
 bundler
 rails
 htmlbeautifier
+rcodetools
+reek
 rubocop
+rubyLocate
 pry
 solargraph
 haste
