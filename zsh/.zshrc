@@ -160,7 +160,7 @@ fi
 
 # Enable luarocks
 if [[ $+commands[luarocks] && -d ${HOME}/.luarocks ]]; then
-  eval "$(luarocks path --no-bin)"
+  eval "$(luarocks --lua-version 5.3 path --no-bin)"
   path=(${HOME}/.luarocks/bin $path)
 fi
 
