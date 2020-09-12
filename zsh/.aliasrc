@@ -95,3 +95,8 @@ alias venvs="pyenv virtualenvs"
 alias pych="pyenv which"
 alias pyce="pyenv whence"
 
+#--------------------------------------------
+#            Utilities                      #
+#--------------------------------------------
+alias myip="curl ifconfig.me"
+alias myipa="curl ifconfig.me/all"
