@@ -106,6 +106,7 @@ plugins=(
     vscode
     web-search
     # custom plugins
+    john
     poetry
     zsh-autosuggestions
     zsh-nvm
@@ -224,4 +225,6 @@ export PATH="${HOME}/bin:$PATH"
 # Load hashes
 [[ -r ${HOME}/.hashrc ]] && . ${HOME}/.hashrc
 [[ -r ${HOME}/.hashrc.local ]] && . ${HOME}/.hashrc.local
-
+# Load keybindings
+[[ -r ${HOME}/.keybindingrc ]] && . ${HOME}/.keybindingrc
+[[ -r ${HOME}/.keybindingrc.local ]] && . ${HOME}/.keybindingrc.local
