@@ -199,8 +199,8 @@ fi
 export PATH="${HOME}/bin:$PATH"
 
 # Load aliases
-#[[ -r ${HOME}/.aliasrc ]] && . ${HOME}/.aliasrc
-#[[ -r ${HOME}/.aliasrc.local ]] && . ${HOME}/.aliasrc.local
+[[ -r ${HOME}/.aliasrc ]] && . ${HOME}/.aliasrc
+[[ -r ${HOME}/.aliasrc.local ]] && . ${HOME}/.aliasrc.local
 # Load functions
 [[ -r ${HOME}/.functionrc ]] && . ${HOME}/.functionrc
 [[ -r ${HOME}/.functionrc.local ]] && . ${HOME}/.functionrc.local

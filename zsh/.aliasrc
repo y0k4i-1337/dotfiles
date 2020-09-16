@@ -24,7 +24,6 @@ alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias ip='ip -c'                            # Preferred 'ip' implementation
 alias clamdscan='clamdscan --multiscan --fdpass'
-alias opera='opera --password-store=basic'
 
 # f: Open current directory in preferred File Manager
 alias f='xdg-open ./'
@@ -45,8 +44,6 @@ alias sfetch="screenfetch -d \
 #lr: Full Recursive Directory Listing
 #   ------------------------------------------
 alias lR='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
-# ll: List in reversed time order
-alias ll='ls -lrthF'
 # lsd: List directories
 alias lsd='ls -d */'
 
