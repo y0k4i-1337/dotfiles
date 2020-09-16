@@ -122,6 +122,9 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 # }}} End configuration added by Zim install
 
+# Custom Spaceshipt prompt theme configuration
+[[ -r ${HOME}/.spaceshiprc ]] && . ${HOME}/.spaceshiprc
+
 # You may need to manually set your language environment
 export LANG=en_GB.UTF-8
 export LC_CTYPE=pt_BR.UTF-8
@@ -199,11 +202,11 @@ export PATH="${HOME}/bin:$PATH"
 #[[ -r ${HOME}/.aliasrc ]] && . ${HOME}/.aliasrc
 #[[ -r ${HOME}/.aliasrc.local ]] && . ${HOME}/.aliasrc.local
 # Load functions
-#[[ -r ${HOME}/.functionrc ]] && . ${HOME}/.functionrc
-#[[ -r ${HOME}/.functionrc.local ]] && . ${HOME}/.functionrc.local
+[[ -r ${HOME}/.functionrc ]] && . ${HOME}/.functionrc
+[[ -r ${HOME}/.functionrc.local ]] && . ${HOME}/.functionrc.local
 # Load hashes
-#[[ -r ${HOME}/.hashrc ]] && . ${HOME}/.hashrc
-#[[ -r ${HOME}/.hashrc.local ]] && . ${HOME}/.hashrc.local
+[[ -r ${HOME}/.hashrc ]] && . ${HOME}/.hashrc
+[[ -r ${HOME}/.hashrc.local ]] && . ${HOME}/.hashrc.local
 # Load keybindings
 #[[ -r ${HOME}/.keybindingrc ]] && . ${HOME}/.keybindingrc
 #[[ -r ${HOME}/.keybindingrc.local ]] && . ${HOME}/.keybindingrc.local
